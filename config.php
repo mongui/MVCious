@@ -1,12 +1,12 @@
 <?php if ( !defined('MVCious')) exit('No direct script access allowed');
 
-$default_controller	= 'sample1';
-$server_host		= 'localhost';
-$index_file			= 'index.php';
-$document_root		= $_SERVER['DOCUMENT_ROOT']; // 'C:/wamp/www/'
-$index_path			= str_replace($index_file, '', $_SERVER['SCRIPT_NAME']); // '/mvc/'
+$config['default_controller']		= 'sample1';
+$config['server_host']				= 'localhost';
+$config['index_file']				= 'index.php';
+$config['document_root']			= $_SERVER['DOCUMENT_ROOT']; // 'C:/wamp/www/'
+$config['index_path']				= str_replace($config['index_file'], '', $_SERVER['SCRIPT_NAME']); // '/mvc/'
 
-$folders = array(
+$config['folders'] = array(
 				'controllersFolder'	=> 'controllers/',
 				'modelsFolder'		=> 'models/',
 				'viewsFolder'		=> 'views/',
@@ -14,7 +14,7 @@ $folders = array(
 				'helpersFolder'		=> 'helpers/'
 			);
 
-$database = array(
+$config['database'] = array(
 				'dbhost'			=> 'localhost',
 				'dbname'			=> 'database',
 				'dbuser'			=> 'root',
