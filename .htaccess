@@ -1,8 +1,8 @@
 RewriteEngine on
 RewriteCond $1 !^(index\.php|public_data|robots\.txt|phpinfo\.php)
 
-#For PHP version higher than 5.2.6:
+# MVCious route:
 RewriteRule ^(.*)$ /MVCious/index.php?/$1 [L]
 
-#For PHP version less than 5.2.6:
-#RewriteRule ^(.*)$ /MVCious/index.php/$1 [L]
+# Minifier:
+# RewriteRule ^public_data/(.*).(css|js)$ public_data/mnfr.php?files=$1&type=$2 [QSA]

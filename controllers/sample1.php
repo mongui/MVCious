@@ -7,11 +7,28 @@ class Sample1 extends ControllerBase
 	// Access through 'localhost/sample1/index'.
 	public function index()
 	{
-		$this->load->model('mymodel');
-		$returned1 = $this->mymodel->mymethod();
-		var_dump($returned1);
+		$this->load->library('languages');
+		$this->languages->set_lang('es');
+		$this->languages->set_base_lang('en');
+		$this->languages->load_file('langfile1');
 
-		echo '<hr />';
+		$a = $this->languages->get_lang();
+		$b = $this->languages->get_base_lang();
+
+		$c = $this->languages->line('txt1');
+		$d = $this->languages->line('txt3');
+		$e = $this->languages->lines();
+
+		var_dump(
+					'Main language: ' . $a,
+					'Secondary language: ' . $b,
+					'Line "txt1": ' . $c,
+					'Line "txt3": ' . $d,
+					'Language lines: ', $e
+				);
+
+
+		echo '<hr />';		
 
 		$this->config->set('name', 'John Smith');
 		$returned2 = $this->config->get('name');
@@ -31,6 +48,10 @@ class Sample1 extends ControllerBase
 
 		$this->load->helper('myhelper');
 		echo 'Local time:' . sql_timestamp_to_user_defined (date('Y-m-d H:m:i'));
+
+		$this->load->model('mymodel');
+		$returned1 = $this->mymodel->mymethod();
+		var_dump($returned1);
 	}
 
 	// Access through 'localhost/sample1/hello'.
