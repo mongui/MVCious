@@ -3,6 +3,8 @@
 class Sample1 extends ControllerBase
 {
 	// Access through 'localhost/'. Can be changed in config.php/default_controller.
+	// Access through 'localhost/hello'.
+	
 	// Access through 'localhost/sample1'.
 	// Access through 'localhost/sample1/index'.
 	public function index()

@@ -15,10 +15,13 @@ $config['folders'] = array(
 			);
 
 $config['database'] = array(
+				'type'				=> 'mysql', // mysql, sqlite, mssql, sybase, pgsql, odbc, firebird, oracle, dblib.
 				'dbhost'			=> 'localhost',
+				//'filename'		=> 'database.sqlite',
 				'dbname'			=> 'database',
 				'dbuser'			=> 'root',
 				'dbpass'			=> '123456'
 			);
 
+$config['debug']					= FALSE;
 ?>
