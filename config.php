@@ -1,6 +1,7 @@
 <?php if ( !defined('MVCious')) exit('No direct script access allowed');
 
 $config['default_controller']		= 'sample1';
+//$config['controller_extension']	= 'html';
 $config['server_host']				= 'localhost';
 $config['index_file']				= 'index.php';
 $config['document_root']			= $_SERVER['DOCUMENT_ROOT']; // 'C:/wamp/www/'

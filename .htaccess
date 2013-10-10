@@ -6,3 +6,5 @@ RewriteRule ^(.*)$ /MVCious/index.php?/$1 [L]
 
 # Minifier:
 # RewriteRule ^public_data/(.*).(css|js)$ public_data/mnfr.php?files=$1&type=$2 [QSA]
+
+Options -Indexes
