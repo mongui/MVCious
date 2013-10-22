@@ -1,7 +1,15 @@
-<?php if ( !defined('MVCious')) exit('No direct script access allowed');
+<?php if (!defined('MVCious')) exit('No direct script access allowed');
 
 class Mymodel extends ModelBase
 {
+	/**
+	 * This is a Model.
+	 * 
+	 * A model represents the underlying, logical structure of data in a
+	 * software application and the high-level class associated with it.
+	 * This object model does not contain any information about the
+	 * user interface.
+	 */
 	public function mymethod()
 	{
 		$sql = 'SELECT username, email FROM users LIMIT 3';

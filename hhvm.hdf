@@ -1,0 +1,26 @@
+#Start the Hip-Hop VM server: ./hhvm -m server -c hhvm.hdf
+Server {
+    Port = 80
+    SourceRoot = /route/to/MVCious/
+    AllowedDirectories {
+      * = public_data
+    }
+}
+
+VirtualHost {
+    * {
+        Pattern = .*
+        RewriteRules {
+            * {
+                pattern = ^(.*)$
+                to = index.php/$1
+                qsa = true
+            }
+        }
+    }
+}
+
+Eval {
+    Jit = true
+}
+
