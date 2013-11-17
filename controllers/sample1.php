@@ -48,6 +48,10 @@ class Sample1 extends ControllerBase
 		$this->config->set('name', 'John Smith');
 		$returned2 = $this->config->get('name');
 		var_dump($returned2);
+		
+		$this->config->remove('name');
+		$returned2 = $this->config->get('name');
+		var_dump($returned2);
 
 		echo '<hr />';
 

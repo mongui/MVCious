@@ -35,7 +35,7 @@ if (!function_exists('dump')) {
 			}
 			echo '<strong>Debug #' . (++$i) . ' of ' . $total_arguments . '</strong>: ';
 			print_r($argument);
-			if (!is_array($argument)) {
+			if (!is_array($argument) && !is_object($argument)) {
 				print_r(' <span style="font-size:80%">(' . gettype($argument) . ': ' . strlen($argument) . ')</span>');
 			}
 		}

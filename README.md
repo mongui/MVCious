@@ -1,7 +1,7 @@
 MVCious
 =======
 
-MVCious is a light weight MVC (Model View Controller) framework for PHP >= 5.3.0.
+MVCious is a light weight HMVC (Hierarchical-Model-View-Controller) framework for PHP >= 5.3.0.
 
 The usage of this package in connection with PHP's object-oriented features allows you to build scalable, reusable and expressive Web applications.
 

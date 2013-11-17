@@ -25,4 +25,3 @@ class Mymodel extends ModelBase
 		return $rtrn;
 	}
 }
-?>
